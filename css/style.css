@@ -55,6 +55,7 @@ body {
 }
 .box .btn:active {
   color: #627796;
+  border-color: #627796;
 }
 .box .left-side {
   display: flex;

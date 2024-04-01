@@ -1,0 +1,64 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  height: 100%;
+  padding-inline: 5%;
+}
+
+.table1 {
+  margin: 0 auto;
+  text-align: center;
+}
+.table1 th {
+  color: white;
+  background-color: #94CCE8;
+  width: 90px;
+  padding: 13px;
+}
+.table1 th:nth-child(1) {
+  text-align: left;
+  width: 150px;
+}
+.table1 td {
+  background-color: #CDE6F4;
+}
+.table1 tr:not(:nth-child(1)) th {
+  font-weight: 200;
+}
+
+.table2 {
+  width: 522px;
+  margin: 50px auto 0;
+}
+.table2 .row .col {
+  text-align: center;
+  margin: 1px;
+  float: left;
+  background-color: #CDE6F4;
+  width: 90px;
+  padding: 13px;
+}
+.table2 .row .col:nth-child(1) {
+  text-align: left;
+  width: 150px;
+}
+.table2 .row .h {
+  background-color: #94CCE8;
+  color: white;
+}
+.table2 .row:nth-child(1) .col {
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  font-family: Roboto;
+  height: 100%;
+  padding-inline: 5%;
+}
+
+.card {
+  float: left;
+  margin: 10px 15px;
+  text-align: center;
+  width: 250px;
+}
+.card__head {
+  color: white;
+}
+.card__head .price {
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 13px;
+}
+.card__head .edition {
+  font-size: 28px;
+  padding: 15px 0;
+}
+.card__content {
+  padding: 10px;
+  color: grey;
+  border: 7px solid;
+  border-inline: 2px solid;
+  background-color: #fff;
+}
+.card__content .features {
+  border-bottom: 1px dashed grey;
+}
+.card__content .features ul {
+  margin-bottom: 25px;
+  list-style-type: none;
+}
+.card__content .features ul li {
+  margin: 10px 0;
+}
+.card__content .features span {
+  font-weight: 700;
+}
+.card__content .btn {
+  margin: 25px 60px 15px;
+}
+.card__content .btn a {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.cyan {
+  background-color: #16A086;
+}
+.cyan .card__content {
+  border-color: #318A75;
+}
+.cyan .card__content .btn {
+  background-color: #16A086;
+}
+
+.orange {
+  background-color: #F39C11;
+}
+.orange .card__content {
+  border-color: #D27D07;
+}
+.orange .card__content .btn {
+  background-color: #F39C11;
+}
+
+.red {
+  background-color: #C1392B;
+}
+.red .card__content {
+  border-color: #9E2D1E;
+}
+.red .card__content .btn {
+  background-color: #C1392B;
+}/*# sourceMappingURL=style.css.map */

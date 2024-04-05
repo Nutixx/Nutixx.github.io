@@ -35,12 +35,13 @@ p {
 .info {
     border-bottom: 1px solid #c0c0c0;
     padding: 10px;
+    text-align: center;
 }
 .side {
-    font-weight: 700px;
-    width: 180;
+    font-weight: 700;
+    width: 180px;
     display: inline-block;
 }
-p:nth-child() {
-    background: #ececec;
+p:nth-child(even) {
+    background: #dadada;
 }

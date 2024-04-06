@@ -1,0 +1,129 @@
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    padding: 3vw;
+    background-color: #362929;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    width: 60vw;
+    height: 25vw;
+    font-size: 1.6vw;
+
+    .picture {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 45%;
+        height: 100%;
+        width: 35%;
+        background-image: url(https://vgorode.ua/img/article/12491/75_main-v1695288133.jpg);
+        &__banner{
+            position: absolute;
+            right: 3%;
+            bottom: 6%;
+            padding: 10% 20%;
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 70%;
+            line-height: 200%;
+            font-weight: 700;
+            p {
+                font-size: 275%;
+            }
+            span{color:#F8C618;}
+        }
+    }
+
+    .main {
+        width: 65%;
+        padding: 2.5%;
+
+        .title {
+            font-size: 90%;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 3%;
+
+            &__block {
+                position: relative;
+                text-align: center;
+                width: 40%;
+                padding: 4% 0;
+                border-bottom: 0.1vw solid #D5D5D5;
+
+                &_price {
+                    font-size: 80%;
+                    color: #A0A0A0;
+                    font-weight: 600;
+                }
+            }
+            &__block:after {
+                position: absolute;
+                top: calc(100% - 0.49vw);
+                left: calc(50% - 0.5vw);
+                content: '';
+                height: 1vw;
+                width: 1vw;
+                background-color: #D5D5D5;
+                transform: rotateZ(45deg);
+              }
+        }
+    }
+
+    .btn {
+        transition: 0.5s;
+        position: absolute;
+        right: 0%;
+        bottom: -25%;
+        width: 20%;
+        height: 20%;
+        background-color: black;
+        a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .btn:hover{
+        transition: 0.5s;
+        width: 30%;
+        background-color: #fff;
+        a{
+            color: black;
+        }
+    }
+    
+}
+

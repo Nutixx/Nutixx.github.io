@@ -1,0 +1,51 @@
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.fullwrap {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2%;
+    background-color: rgb(247, 216, 177);
+    clear: both;
+}
+
+header {
+    background-color: blue;
+    height: 10vh;
+    margin-bottom: 2%;
+}
+
+.wrap {
+    padding: 2%;
+    background-color: aquamarine;
+    height: 700px;
+    main {
+        float: left;
+        background-color: red;
+        width: 57%;
+        height: 100%;
+    }
+
+    aside {
+        float: right;
+        background-color: yellow;
+        width: 37%;
+        height: 100%;
+    }
+}
+
+footer {
+    height: 13vh;
+    margin: 2% 0;
+    background-color: green;
+}

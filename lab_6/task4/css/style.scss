@@ -1,0 +1,122 @@
+$blue: #5F9C9E;
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    height: 100%;
+    padding-inline: 5%;
+}
+
+.calculator{
+    position: relative;
+    float: left;
+    margin: 20px;
+    width: 420px;
+    height: 645px;
+    border: 4px solid $blue;
+    border-radius: 15px;
+    &__title {
+        font-size: 20px;
+        margin-top: 20px;
+        background-color: $blue;
+        text-align: right;
+        color: white;
+        height: 60px;
+        padding: 13px;
+    }
+    &__text_box {
+        font-size: 35px;
+        display: block;
+        margin: 15px auto;
+        width: 390px;
+        height: 60px;
+        border: 4px solid $blue;
+        border-radius: 10px;
+        text-align: right;
+        color: $blue;
+    }
+    &__bluebutton {
+        height: 50px;
+        width: 135px;
+        background-color: $blue;
+    }
+    &__bluebutton:active{
+        transition: 0.2s;
+        background-color: #548b8d;
+        border-color: #548b8d;
+    }
+    &__bluebutton_position {
+        position: absolute;
+        right: 15px;
+    }
+    &__bluebutton_float {
+        margin-right: 15px;
+        float: right;
+    }
+    &__buttons_float {
+        clear: both;
+        
+        .btn_float {
+            float: left;
+            margin: 10px;
+        }
+    }
+    &__buttons{
+        padding: 5px;
+        margin: 75px auto 0;
+        .row {
+            height: 80px;
+            margin: 10px 0 20px;
+            position: relative;
+            .btn{
+                position: absolute;
+            }
+            .btn:nth-child(1){
+                left: 10px;
+            }
+            .btn:nth-child(2){
+                left: 110px;
+            }
+            .btn:nth-child(3){
+                left: 210px;
+            }
+            .btn:nth-child(4){
+                left: 310px;
+                right: 0;
+            }
+        }
+    }
+}
+
+.btn {
+    font-size: 30px;
+    padding-top: 17.5px;
+    width: 80px;
+    height: 80px;
+    border: 4px solid $blue;
+    border-radius: 10px;
+    color: $blue;
+    text-align: center;
+}
+.btn:hover{
+    transition: 0.2s;
+    background-color: $blue;
+    color:white;
+}
+.btn:active{
+    background-color: #548b8d;
+    border-color: #548b8d;
+}

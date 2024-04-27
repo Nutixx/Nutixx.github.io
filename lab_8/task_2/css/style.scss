@@ -1,0 +1,333 @@
+/*
+* Background Images - Practice
+* CSS Styles
+*
+*/
+
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans;
+    font-size: 14px;
+    background-color: #373737;
+    background-image: url(../img/bg.png);
+}
+
+.container {
+    margin: 0 10%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0000007a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #464646;
+}
+
+
+/* Header */
+nav {
+    padding-inline: 15%;
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    background-color: #0000007a;
+
+    .menu {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        li {
+            height: 100%;
+
+            a {
+                padding-inline: 15px;
+                display: block;
+                height: 100%;
+                line-height: 65px;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                font-size: 15px;
+            }
+
+            a:hover {
+                background-color: #FF2B3A;
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/bg-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50%;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+
+    h1 {
+        font-size: 75px;
+        font-family: Metal Mania;
+        color: white;
+        margin: 11% auto 50px;
+    }
+
+}
+
+.button {
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: rgba(226, 226, 226, 0.75);
+    background: rgb(255, 0, 0);
+    background: linear-gradient(150deg, rgba(255, 0, 0, 1) 0%, rgba(255, 70, 94, 1) 100%);
+}
+
+.button:hover {
+    color: rgba(255, 255, 255, 0.75);
+    background: rgb(252, 106, 106);
+    background: linear-gradient(150deg, rgb(255, 67, 67) 0%, rgb(255, 115, 134) 100%);
+}
+
+
+
+
+/* Tour */
+
+h2 {
+    text-transform: uppercase;
+    color: #E2E2E2;
+    text-align: center;
+    width: 100%;
+    margin: 30px 0;
+    font-size: 25px
+}
+
+#tour {
+    .container {
+        margin-inline: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+
+
+
+        .tour-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+            -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+            line-height: 20px;
+            padding: 30px 1%;
+            color: rgba(226, 226, 226, 0.75);
+            height: 20vw;
+            width: calc(25% - 15px);
+            background-color: rgb(0, 0, 0);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            // background-position: top;
+            .tour-town {
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            .tour-date {
+                font-style: italic;
+            }
+
+            .button {
+                font-size: 125%;
+                display: block;
+                margin-top: 7%;
+                height: 35px;
+                line-height: 35px;
+                padding-inline: 20px;
+                width: fit-content;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.madrid {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(../img/tour/madrid.jpg);
+}
+
+.turin {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(../img/tour/turin.jpg);
+}
+
+.hamburg {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(../img/tour/hamburg.jpg);
+}
+
+.krakow {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(../img/tour/krakow.jpg);
+}
+
+/* Gallery */
+
+#gallery {
+    margin-bottom: 40px;
+
+    h2 {
+        margin: 25px 0 0;
+    }
+
+    .container {
+        display: flex;
+        margin-inline: 10%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        .photo {
+            width: calc(33.3% - 20px);
+            box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+            -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+            -moz-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.6);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* Subscribe */
+
+#subscribe {
+    .container {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        height: 250px;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url(../img/bg-02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 50%;
+
+        h2 {
+            color: #e2e2e28e;
+        }
+
+        p {
+            color: #e2e2e28e;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-form {
+            height: 35px;
+
+            input {
+                padding-inline: 5px;
+                height: 100%;
+                width: 220px;
+            }
+
+            button {
+                border: 0px;
+                border-radius: 2px;
+                padding-inline: 15px;
+                height: 100%;
+                font-weight: 100;
+                margin: 0 auto;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: rgba(192, 192, 192, 0.8);
+                background: rgb(255, 0, 0);
+                background: linear-gradient(150deg, rgba(255, 0, 0, 1) 0%, rgba(255, 70, 94, 1) 100%);
+            }
+
+            button:hover {
+                color: rgba(255, 255, 255, 0.75);
+                background: rgb(252, 106, 106);
+                background: linear-gradient(150deg, rgb(255, 67, 67) 0%, rgb(255, 115, 134) 100%);
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #212121;
+    background-image: url(../img/bg.png);
+    color: #cfcfcf;
+
+    .social {
+        margin: 20px;
+
+        a {
+            font-size: 20px;
+            margin: 5px;
+            color: #cfcfcf;
+        }
+
+        a:hover {
+            color: #aaaaaa;
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+        margin: 20px;
+        text-align: center;
+    }
+}

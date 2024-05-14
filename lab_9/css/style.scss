@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Raleway;
+    color: #B6B6B6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.project-name {
+    color: #57A6DC;
+    font-weight: 400;
+}
+
+header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        font-weight: 500;
+
+        a {
+            text-decoration: none;
+            color: #B6B6B6;
+        }
+    }
+}
+
+.template-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 400px;
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: 0 -0px;
+    color: white;
+
+    h2 {
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    .btn {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 15px 25px;
+        border-radius: 25px;
+        background-color: #FA5BA5;
+    }
+}
+
+
+section {
+    padding: 50px 0;
+}
+
+h3,
+h4 {
+    font-size: 22px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+}
+
+.services {
+    &-wrap {
+        display: flex;
+        gap: 40px;
+
+        &__topic {
+            text-align: center;
+
+            img {
+                height: 50px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.blog {
+    background-color: #FCFCFC;
+    .news {
+        display: flex;
+        margin: 20px 0;
+        gap: 20px;
+        &-content {
+            padding: 20px 0;
+        }
+    }
+}
+
+.gallery {
+    &-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        a{
+            width: calc(25% - 15px);
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #38404B;
+    text-align: center;
+    padding: 40px 0;
+    .project-name{
+        color: #B5C3D6;
+        margin: 0;
+    }
+    nav {
+        justify-content: center;
+        a {
+            color: #B5C3D6;
+        }
+    }
+    p{
+        font-size: 14px;
+    }
+    
+}

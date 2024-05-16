@@ -20,6 +20,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    padding-inline: 10px;
 }
 
 .project-name {
@@ -38,9 +39,10 @@ nav {
     align-items: center;
 
     ul {
-        gap: 20px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        width: 250px;
         list-style-type: none;
         font-weight: 500;
 
@@ -114,24 +116,31 @@ h3 {
 
 .blog {
     background-color: #FCFCFC;
+
     .news {
         display: flex;
-        margin: 20px 0;
         gap: 20px;
+
         &-content {
             padding: 20px 0;
         }
     }
+
+    .news:first-of-type {
+        margin-bottom: 20px;
+    }
 }
 
 .gallery {
-    &-wrapper{
+    &-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
-        a{
+
+        a {
             width: calc(25% - 15px);
+
             img {
                 width: 100%;
             }
@@ -146,18 +155,91 @@ footer {
     background-color: #38404B;
     text-align: center;
     padding: 40px 0;
-    .project-name{
+
+    .project-name {
         color: #B5C3D6;
         margin: 0;
     }
+
     nav {
         justify-content: center;
+
         a {
             color: #B5C3D6;
         }
     }
-    p{
+
+    p {
         font-size: 14px;
     }
-    
+
+}
+
+@media (max-width: 750px) {
+    .services {
+        &-wrap {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &__topic {
+                width: 33%;
+                min-width: 165px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav {
+        ul {
+            width: 300px;
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .blog {
+        text-align: center;
+
+        .news {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .news:first-of-type {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    h3 {
+        margin-bottom: 20px;
+    }
+    .gallery {
+        &-wrapper {
+            gap: 6px;
+
+            a {
+                width: calc(33% - 4px);
+            }
+        }
+    }
+    nav {
+        ul {
+            width: 275px;
+        }
+    }
 }

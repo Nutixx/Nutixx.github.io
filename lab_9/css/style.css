@@ -19,6 +19,7 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding-inline: 10px;
 }
 
 .project-name {
@@ -37,9 +38,10 @@ nav {
   align-items: center;
 }
 nav ul {
-  gap: 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 250px;
   list-style-type: none;
   font-weight: 500;
 }
@@ -106,11 +108,13 @@ h3 {
 }
 .blog .news {
   display: flex;
-  margin: 20px 0;
   gap: 20px;
 }
 .blog .news-content {
   padding: 20px 0;
+}
+.blog .news:first-of-type {
+  margin-bottom: 20px;
 }
 
 .gallery-wrapper {
@@ -146,4 +150,56 @@ footer nav a {
 }
 footer p {
   font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  .services-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services-wrap__topic {
+    width: 33%;
+    min-width: 165px;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  nav ul {
+    width: 300px;
+  }
+  nav ul a {
+    font-size: 1.2rem;
+  }
+  .blog {
+    text-align: center;
+  }
+  .blog .news {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .blog .news h4 {
+    margin-bottom: 10px;
+  }
+  .blog .news:first-of-type {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 400px) {
+  h3 {
+    margin-bottom: 20px;
+  }
+  .gallery-wrapper {
+    gap: 6px;
+  }
+  .gallery-wrapper a {
+    width: calc(33% - 4px);
+  }
+  nav ul {
+    width: 275px;
+  }
 }/*# sourceMappingURL=style.css.map */

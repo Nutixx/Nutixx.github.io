@@ -176,12 +176,30 @@ footer {
   color: white;
 }
 footer .social {
+  display: flex;
   margin: 20px;
 }
 footer .social a {
+  display: block;
+  height: 48px;
+  width: 48px;
+  background-image: url(../images/sprites.png);
+  background-repeat: no-repeat;
   font-size: 20px;
   margin-inline: 10px;
   color: #e4e4e4;
+}
+footer .social .codepen {
+  background-position: -578px -2px;
+}
+footer .social .facebook {
+  background-position: -386px -97px;
+}
+footer .social .spotify {
+  background-position: -386px -290px;
+}
+footer .social .telegram {
+  background-position: -578px -290px;
 }
 footer .social a:hover {
   color: #cccccc;

@@ -14,8 +14,8 @@ CSS3 Transitions and Animations - Practice
     to {
         width: 40px;
         height: 40px;
-        margin-left: -21px;
-        margin-top: -21px;
+        margin-left: -22.5px;
+        margin-top: -22.5px;
         opacity: 0;
     }
 }
@@ -29,8 +29,8 @@ CSS3 Transitions and Animations - Practice
     to {
         width: 66px;
         height: 66px;
-        margin-left: -34px;
-        margin-top: -34px;
+        margin-left: -35px;
+        margin-top: -35px;
         opacity: 0;
     }
 }
@@ -101,11 +101,14 @@ h2 {
 .pin:after {
     content: "";
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 8.2px;
+    top: 8.2px;
+    /* left: 50%;
+    top: 50%; */
     display: block;
     border-radius: 50%;
     border: 1px solid #f3244a;
+    /* border: 1px solid #663841; */
     width: 0;
     height: 0;
     margin-left: -2px;

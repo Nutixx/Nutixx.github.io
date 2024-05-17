@@ -201,12 +201,34 @@ footer {
     color: white;
 
     .social {
+        display: flex;
         margin: 20px;
 
         a {
+            display: block;
+            // background-color: #fff;
+            height: 48px;
+            width: 48px;
+            background-image: url(../images/sprites.png);
+            background-repeat: no-repeat;
             font-size: 20px;
             margin-inline: 10px;
             color: #e4e4e4;
+        }
+        .codepen {
+            background-position: -578px -2px;
+        }
+
+        .facebook {
+            background-position: -386px -97px;
+        }
+        
+        .spotify {
+            background-position: -386px -290px;
+        }
+
+        .telegram {
+            background-position: -578px -290px;
         }
 
         a:hover {

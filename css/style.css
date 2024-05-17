@@ -177,16 +177,17 @@ footer {
 }
 footer .social {
   display: flex;
-  margin: 20px;
+  margin: 10px;
 }
 footer .social a {
+  scale: 0.7;
   display: block;
   height: 48px;
   width: 48px;
   background-image: url(../images/sprites.png);
   background-repeat: no-repeat;
   font-size: 20px;
-  margin-inline: 10px;
+  margin-inline: 5px;
   color: #e4e4e4;
 }
 footer .social .codepen {

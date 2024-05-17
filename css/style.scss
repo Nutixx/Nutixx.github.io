@@ -202,9 +202,10 @@ footer {
 
     .social {
         display: flex;
-        margin: 20px;
+        margin: 10px;
 
         a {
+            scale: 0.7;
             display: block;
             // background-color: #fff;
             height: 48px;
@@ -212,7 +213,7 @@ footer {
             background-image: url(../images/sprites.png);
             background-repeat: no-repeat;
             font-size: 20px;
-            margin-inline: 10px;
+            margin-inline: 5px;
             color: #e4e4e4;
         }
         .codepen {

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  font-family: Roboto;
+  height: 100%;
+  padding-inline: 5%;
+}
+
+.card {
+  border: 3px solid rgb(190, 190, 190);
+  margin: 20px auto;
+  width: 400px;
+}
+.card__header {
+  background-image: url(../images/office.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 250px;
+  border-bottom: 2px solid white;
+}
+.card__title {
+  padding-inline: 70px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  background-color: rgb(183, 17, 47);
+}
+.card__title span {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.card__title p {
+  font-size: 30px;
+  font-weight: 900;
+}
+.card__content {
+  font-size: 1.2rem;
+  padding: 20px 30px;
+  border: 5px solid rgb(219, 219, 219);
+  border-top: none;
+  margin: 0 auto;
+}
+.card__content p {
+  font-weight: 500;
+  color: red;
+  font-size: 1rem;
+}
+.card__content ul li {
+  position: relative;
+  list-style-type: none;
+  margin: 10px auto;
+}
+.card__content li:after {
+  content: "*";
+  position: absolute;
+  color: red;
+  font-weight: 700;
+  right: -15px;
+}
+.card__content li:first-of-type:before {
+  content: "";
+  width: 15px;
+  height: 20px;
+  right: 10px;
+  top: calc(50% - 10px);
+  border: 2px solid rgba(128, 128, 128, 0.681);
+  border-radius: 3px;
+  position: absolute;
+}
+.card__content input,
+.card__content select {
+  width: 100%;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  border: 2px solid rgba(180, 180, 180, 0.5);
+  border-radius: 5px;
+  padding: 8px;
+  text-decoration: none;
+}
+.card__content .button {
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  height: 60px;
+  border-radius: 5px;
+  background: rgb(50, 71, 122);
+  background: linear-gradient(0deg, rgb(50, 71, 122) 0%, rgb(0, 154, 255) 100%);
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  transition-duration: 0.3s;
+}/*# sourceMappingURL=style.css.map */

@@ -62,7 +62,11 @@ svg:last-of-type {
   height: 172px;
 }
 .socials-container .button-wrapper a.social-btn {
-  display: block;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   width: 384px;
   height: 34px;
   background-color: rgb(255, 253, 253);
@@ -70,9 +74,15 @@ svg:last-of-type {
   border: 1px solid rgb(204, 204, 204);
   box-shadow: 2px 4px 6px 0px rgba(79, 79, 79, 0.15);
 }
+.socials-container .button-wrapper a.social-btn i {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.socials-container .button-wrapper a.social-btn p {
+  color: rgb(112, 112, 112);
+}
 
 .linkedIn i {
-  display: inline-block;
-  width: 30px;
-  background-image: url(../images/Facebook.svg);
+  background-image: url(../images/Linkedin.svg);
 }/*# sourceMappingURL=style.css.map */

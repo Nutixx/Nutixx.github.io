@@ -67,7 +67,20 @@ svg:last-of-type {
         height: 172px;
         
         a.social-btn {
-            display: block;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            i {
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+            p {
+                
+                color: rgba(112, 112, 112, 1);
+            }
             width: 384px;
             height: 34px;
             background-color: rgba(255, 253, 253, 1);
@@ -81,8 +94,6 @@ svg:last-of-type {
 
 .linkedIn {
     i {
-        display: inline-block;
-        width: 30px;
-        background-image: url(../images/Facebook.svg);
+        background-image: url(../images/Linkedin.svg);
     }
 }

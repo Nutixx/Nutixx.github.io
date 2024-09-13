@@ -77,8 +77,8 @@ body {
   color: rgb(255, 253, 253);
 }
 .socials-container .button-wrapper {
-  padding-inline: 20px;
-  width: 425px;
+  padding-inline: 30px;
+  width: 445px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -139,8 +139,8 @@ body {
   bottom: 0;
 }
 .sign-up-container .sign-up-content {
-  width: 425px;
-  padding-inline: 20px;
+  width: 445px;
+  padding-inline: 30px;
   text-align: center;
 }
 .sign-up-container .sign-up-content h2 {
@@ -215,7 +215,7 @@ body {
   justify-content: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   svg {
     display: none;
   }
@@ -225,11 +225,12 @@ body {
   .socials-container {
     width: 100%;
     height: 50%;
-  }
-  .socials-container .button-wrapper {
-    margin-top: 30px;
+    flex-wrap: wrap;
   }
   .socials-container h1 {
+    text-align: center;
+    width: 445px;
+    position: static;
     top: 10px;
   }
   .sign-up-container {

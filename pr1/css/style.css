@@ -226,9 +226,21 @@ body {
     width: 100%;
     height: 50%;
   }
+  .socials-container .button-wrapper {
+    margin-top: 30px;
+  }
+  .socials-container h1 {
+    top: 10px;
+  }
   .sign-up-container {
     width: 100%;
     height: 50%;
     margin: 40px 0;
+  }
+  .sign-up-container .sign-up-content h2 {
+    margin-bottom: 10px;
+  }
+  .sign-up-container .sign-up-content p {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

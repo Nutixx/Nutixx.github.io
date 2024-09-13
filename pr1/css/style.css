@@ -46,7 +46,7 @@ body {
   text-decoration: none;
   font-family: "Gilroy-Medium";
   font-size: 15px;
-  width: 384px;
+  width: 100%;
   height: 34px;
   border-radius: 15px;
   border: 1px solid rgb(204, 204, 204);
@@ -77,6 +77,8 @@ body {
   color: rgb(255, 253, 253);
 }
 .socials-container .button-wrapper {
+  padding-inline: 20px;
+  width: 425px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -137,6 +139,8 @@ body {
   bottom: 0;
 }
 .sign-up-container .sign-up-content {
+  width: 425px;
+  padding-inline: 20px;
   text-align: center;
 }
 .sign-up-container .sign-up-content h2 {
@@ -153,7 +157,7 @@ body {
   margin-bottom: 40px;
 }
 .sign-up-container .sign-up-content form {
-  width: 385px;
+  width: 100%;
   text-align: left;
 }
 .sign-up-container .sign-up-content form input.text {
@@ -209,4 +213,22 @@ body {
   background-color: rgb(3, 169, 244);
   color: white;
   justify-content: center;
+}
+
+@media (max-width: 700px) {
+  svg {
+    display: none;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .socials-container {
+    width: 100%;
+    height: 50%;
+  }
+  .sign-up-container {
+    width: 100%;
+    height: 50%;
+    margin: 40px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

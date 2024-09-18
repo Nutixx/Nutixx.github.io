@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+thead {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #8bc34a;
+    border-top: 2px solid #8bc34a;
+}
+
+th,
+td {
+    padding: 25px 0;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    color: #666;
+}
+
+td {
+    color: gray;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #e7f5d9;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+}
+
+/* Стилі для пагінації */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  .page-number, .prev-page, .next-page {
+    background-color: white;
+    border: none;
+    margin: 0 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #969696;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 50%;
+  }
+  
+  .page-number.active {
+    background-color: #8bc34a; /* Зелений колір для активної сторінки */
+    color: white;
+  }
+  
+  .page-number:hover {
+    background-color: #ddd;
+  }
+
+  .prev-page:hover, .next-page:hover {
+    color: #b8b8b8;;
+  }
+
+  .prev-page:active, .next-page:active {
+    color: #7a7a7a;;
+  }
+  
+  .prev-page, .next-page {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  
+  .load-more-btn {
+    margin: 10px auto 0;
+    visibility: visible;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #6cbf3f; /* Зелений колір */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .load-more-btn:hover {
+    color: #4a8a2d;
+  }
+  
+  .refresh-icon {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 5px;
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+  
+  .load-more-btn:hover .refresh-icon {
+    transform: rotate(450deg); /* Анімація при наведенні */
+  }
+  

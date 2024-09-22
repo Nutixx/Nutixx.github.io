@@ -41,60 +41,75 @@ function renderItems(list, wrap, n) {
         const tr = createField(list[i]);
         wrap.appendChild(tr);
     }
-    // list.forEach(item => {
-    //     const tr = createTaskInstance(item);
-    //     wrap.appendChild(tr);
-    // })
 }
 
 function clearItems() {
     tbody.innerHTML = '';
 }
 
-let paginationElem = document.querySelector('.pagination');
-paginationElem.onclick = function (event) {
-    let target = event.target;
-    if (target.className == 'page-number' || target.className == 'prev-page' || target.className == 'next-page') {
+let paginationElem = document.querySelector('.pagination'); paginationElem.onclick = function (event) {
+    let target = event.target; console.log(target);
+    if (target.className.includes('page-number') || target.className.includes('prev-page') || target.className.includes('next-page')) {
         loadMoreButton.style.visibility = 'visible';
-
-        if (target.className == 'page-number') {
-            n = target.value;
-
+        if (target.className.includes('page-number')) {
+            n = +target.value;
         }
-        else if (target.className == 'prev-page') {
+        else if (target.className.includes('prev-page')) {
             console.log('<')
             if (n > 0) {
                 n -= 1;
             }
         }
-        else if (target.className == 'next-page') {
+        else if (target.className.includes('next-page')) {
             console.log('>')
             if (n < 2) {
                 n += 1;
             }
         }
-        console.log(n);
+        console.log(n, 'vlad');
         clearItems();
         renderItems(referrals, tbody, n);
-        let previousElem = this.querySelector('.active');
-        previousElem.classList.remove('active');
-        target.classList.add('active');
+
+        const btnWrapper = document.querySelector('.pagination');
+        console.log(btnWrapper.children);
+        for (let btn of btnWrapper.children) {
+            console.log(btn);
+            if (btn.className.includes('page-number')) {
+                if (+btn.value === n) {
+                    btn.classList.add('active')
+                }
+                else {
+                    btn.classList.remove('active')
+                }
+            }
+        }
     }
 }
 
+
 let loadMoreButton = document.querySelector('.load-more-btn');
-loadMoreButton.onclick = function(event) {
+loadMoreButton.onclick = function (event) {
     let target = event.target;
-    if(n < 2){
+    if (n < 2) {
         n++
         renderItems(referrals, tbody, n);
     }
-    if(n == 2){
+    if (n == 2) {
         target.style.visibility = 'hidden'
     }
+    activeGenerator('.pagination','page-number');
 }
 
-
+function activeGenerator(btnWrap, include) {
+    const btnWrapper = document.querySelector(btnWrap);
+    for (let btn of btnWrapper.children) {
+        if (btn.className.includes(include)) {
+            if (+btn.value === n) {
+                btn.classList.add('active')
+            }
+        }
+    }
+}
 
 function createField(inputValue) {
     let tr = document.createElement('tr');
@@ -106,4 +121,3 @@ function createField(inputValue) {
     }
     return tr;
 }
-

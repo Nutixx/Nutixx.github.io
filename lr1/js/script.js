@@ -48,32 +48,27 @@ function clearItems() {
 }
 
 let paginationElem = document.querySelector('.pagination'); paginationElem.onclick = function (event) {
-    let target = event.target; console.log(target);
+    let target = event.target;
     if (target.className.includes('page-number') || target.className.includes('prev-page') || target.className.includes('next-page')) {
         loadMoreButton.style.visibility = 'visible';
         if (target.className.includes('page-number')) {
             n = +target.value;
         }
         else if (target.className.includes('prev-page')) {
-            console.log('<')
             if (n > 0) {
                 n -= 1;
             }
         }
         else if (target.className.includes('next-page')) {
-            console.log('>')
             if (n < 2) {
                 n += 1;
             }
         }
-        console.log(n, 'vlad');
         clearItems();
         renderItems(referrals, tbody, n);
 
         const btnWrapper = document.querySelector('.pagination');
-        console.log(btnWrapper.children);
         for (let btn of btnWrapper.children) {
-            console.log(btn);
             if (btn.className.includes('page-number')) {
                 if (+btn.value === n) {
                     btn.classList.add('active')

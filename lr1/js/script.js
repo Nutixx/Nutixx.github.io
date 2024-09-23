@@ -1,34 +1,34 @@
 const referrals = [
-    { number: 1, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 2, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 3, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 4, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 5, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
-    { number: 6, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 7, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 8, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 9, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 10, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
-    { number: 11, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 12, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 13, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 14, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 15, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
-    { number: 16, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 17, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 18, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 19, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 20, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
-    { number: 21, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 22, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 23, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 24, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 25, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
-    { number: 26, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
-    { number: 27, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
-    { number: 28, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
-    { number: 29, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
-    { number: 30, date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир1' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир2' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир3' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир4' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир5' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир11' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир12' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир13' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир14' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир15' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир16' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир17' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир18' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир19' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир20' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир21' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир22' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир23' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир24' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир25' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир26' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир27' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир28' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир29' },
+    { date: '22.08.22', saldo: 20, kolo: 1, accrued: 3, referral: 'Володимиров Володимир30' },
 ];
 
 let tbody = document.querySelector('tbody');
@@ -38,7 +38,7 @@ renderItems(referrals, tbody, n);
 
 function renderItems(list, wrap, n) {
     for (let i = n * 10; i < n * 10 + 10; i++) {
-        const tr = createField(list[i]);
+        const tr = createField(list[i], list);
         wrap.appendChild(tr);
     }
 }
@@ -106,9 +106,17 @@ function activeGenerator(btnWrap, include) {
     }
 }
 
-function createField(inputValue) {
+function createField(inputValue, list) {
     let tr = document.createElement('tr');
     let td;
+    for(let i = 0; i < list.length; i++){
+        if(list[i] == inputValue){
+            td = document.createElement('td');
+            td.innerText = i+1;
+            tr.appendChild(td);
+        }
+    }
+    
     for (let item in inputValue) {
         td = document.createElement('td');
         td.innerText = inputValue[item];

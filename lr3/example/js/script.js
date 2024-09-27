@@ -35,11 +35,11 @@ let library = [
 
 function displayLibrary() {
     library.forEach(book => {
-        console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+        console.log(`Назва: ${book.title}, Автор: ${book.author}, Рік видання: ${book.year}, Прочитана: ${book.isRead ? "Так" : "Ні"}`);
     })
 }
 
-displayLibrary();
+// displayLibrary();
 
 library.push({
     title: "The Great Gatsby",
@@ -50,14 +50,14 @@ library.push({
 
 displayLibrary();
 
-library.sort((a, b) => a.year - b.year);
-console.log("Відсортовані книги за роком видання: ", library);
+// library.sort((a, b) => a.year - b.year);
+// console.log("Відсортовані книги за роком видання: ", library);
 
-let unreadBooks = library.filter(book => !book.isRead);
-console.log("Непрочитані книги: ", unreadBooks);
+// let unreadBooks = library.filter(book => !book.isRead);
+// console.log("Непрочитані книги: ", unreadBooks);
 
-let tolkienBook = library.find(book => book.author === "J.R.R. Tolkien");
-console.log("Книга Толкіна: ", tolkienBook);
+// let tolkienBook = library.find(book => book.author === "J.R.R. Tolkien");
+// console.log("Книга Толкіна: ", tolkienBook);
 
 function addBookToLibrary() {
     let title = prompt('Введіть назву книги:');
@@ -68,4 +68,30 @@ function addBookToLibrary() {
     library.push({ title, author, year, isRead });
     displayLibrary();
 }
-addBookToLibrary();
+// addBookToLibrary();
+
+function markAsRead(title, list){
+    list.forEach(item => {
+        if(title == item.title){
+            if(item.isRead == false){
+                item.isRead = true;
+                console.log("Книгу позначено як прочитану.");
+            }
+            else{
+                console.log("Книга вже прочитана!");
+            }   
+        }
+    })
+}
+
+markAsRead("The Great Gatsby", library);
+
+function calculateAverageYear(list){
+    let sum = 0;
+    list.forEach(item => {
+        sum += item.year
+    })
+    console.log(sum/list.length);
+}
+
+calculateAverageYear(library);

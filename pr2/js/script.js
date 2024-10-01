@@ -22,16 +22,20 @@ const purchases = [
     { purchaseId: 2, productId: 1, quantity: 2 },
 ];
 
-function getTotalSales(productName, products, purchases) {
-    desiredProduct = products.find(product => product.name == productName);
-    return purchases.reduce((total, purchase) => {
-        const currentProduct = products[purchase.productId];
-        if (currentProduct.productId == desiredProduct.productId) {
-            total += currentProduct.price * purchase.quantity;
-        }
-        return total;
-    }, 0);
-
+function getTotalSales(products, purchases) {
+    const object = {};
+    for(let product of products){
+        console.log(product)
+        let totalValue = purchases.reduce((total, purchase) => {
+            const currentProduct = products[purchase.productId];
+            if (currentProduct.productId == product.productId) {
+                total += currentProduct.price * purchase.quantity;
+            }
+            return total;
+        }, 0);
+        object[product.name] = totalValue;
+    }
+    return object;
 }
 
-console.log('getTotalSales -', getTotalSales('product', products, purchases));
+console.log('getTotalSales -', getTotalSales(products, purchases));

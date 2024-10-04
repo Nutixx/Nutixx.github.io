@@ -47,7 +47,8 @@ function clearItems() {
     tbody.innerHTML = '';
 }
 
-let paginationElem = document.querySelector('.pagination'); paginationElem.onclick = function (event) {
+let paginationElem = document.querySelector('.pagination');
+    paginationElem.onclick = function (event) {
     let target = event.target;
     if (target.className.includes('page-number') || target.className.includes('prev-page') || target.className.includes('next-page')) {
         loadMoreButton.style.visibility = 'visible';
@@ -92,7 +93,7 @@ loadMoreButton.onclick = function (event) {
     if (n == 2) {
         target.style.visibility = 'hidden'
     }
-    activeGenerator('.pagination','page-number');
+    activeGenerator('.pagination', 'page-number');
 }
 
 function activeGenerator(btnWrap, include) {
@@ -109,14 +110,14 @@ function activeGenerator(btnWrap, include) {
 function createField(inputValue, list) {
     let tr = document.createElement('tr');
     let td;
-    for(let i = 0; i < list.length; i++){
-        if(list[i] == inputValue){
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] == inputValue) {
             td = document.createElement('td');
-            td.innerText = i+1;
+            td.innerText = i + 1;
             tr.appendChild(td);
         }
     }
-    
+
     for (let item in inputValue) {
         td = document.createElement('td');
         td.innerText = inputValue[item];

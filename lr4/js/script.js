@@ -9,11 +9,17 @@ function Convertor() {
 
     convertorWrapper.addEventListener('change', (event) => {
         const target = event.target;
-        if (target == celsius) {
-            fahrenheit.value = (+target.value / 1.8) - 32
+        if(target.value){
+            if (target == celsius) {
+                fahrenheit.value = target.value * 9/5 + 32;
+            }
+            else if (target == fahrenheit) {
+                celsius.value = 5 / 9 * (+target.value - 32);
+            }
         }
-        else if (target == fahrenheit) {
-            celsius.value = (+target.value * 1.8) + 32
+        else{
+            fahrenheit.value = null;
+            celsius.value = null
         }
     })
 }
@@ -200,75 +206,75 @@ function initPhotoRotator(divId, images) {
 initPhotoRotator('rotator', imagesArray);
 
 
-function captcha(){
+function captcha() {
     const captcha = document.querySelector('.captcha');
     const captchaBlock = document.querySelector('.captcha_block');
     const input = captcha.querySelector('input');
     const answer = getRandomInt(9).toString()
-    +getRandomInt(9).toString()
-    +getRandomInt(9).toString()
-    +getRandomInt(9).toString();
-    
-    for(let i = 0; i < 15*5; i++){
+        + getRandomInt(9).toString()
+        + getRandomInt(9).toString()
+        + getRandomInt(9).toString();
+
+    for (let i = 0; i < 15 * 5; i++) {
         let span = document.createElement('span');
         span.classList.add('pixel');
         captchaBlock.appendChild(span);
-        if(pixeledNumber(answer).includes(i)){
+        if (pixeledNumber(answer).includes(i)) {
             span.classList.add('red');
         }
     }
-    
-    function pixeledNumber(answer){
+
+    function pixeledNumber(answer) {
         let counter = 0;
         const array = [];
         let number = answer.toString();
-        for(let i of number){
-            switch(i){
+        for (let i of number) {
+            switch (i) {
                 case '1':
-                    array.push([1,5,6,7,8,9].map((x)=> x + counter));
+                    array.push([1, 5, 6, 7, 8, 9].map((x) => x + counter));
                     break;
                 case '2':
-                    array.push([0,5,10,11,7,2,3,4,9,14].map((x)=> x + counter));
+                    array.push([0, 5, 10, 11, 7, 2, 3, 4, 9, 14].map((x) => x + counter));
                     break;
                 case '3':
-                    array.push([0,5,10,11,7,13,14,9,4].map((x)=> x + counter));
+                    array.push([0, 5, 10, 11, 7, 13, 14, 9, 4].map((x) => x + counter));
                     break;
                 case '4':
-                    array.push([0,1,2,7,10,11,12,13,14].map((x)=> x + counter));
+                    array.push([0, 1, 2, 7, 10, 11, 12, 13, 14].map((x) => x + counter));
                     break;
                 case '5':
-                    array.push([0,5,10,1,2,7,12,13,14,9,4].map((x)=> x + counter));
+                    array.push([0, 5, 10, 1, 2, 7, 12, 13, 14, 9, 4].map((x) => x + counter));
                     break
                 case '6':
-                    array.push([0,5,10,1,2,7,12,13,14,9,4,3].map((x)=> x + counter));
+                    array.push([0, 5, 10, 1, 2, 7, 12, 13, 14, 9, 4, 3].map((x) => x + counter));
                     break
                 case '7':
-                    array.push([0,5,10,11,7,8,9].map((x)=> x + counter));
+                    array.push([0, 5, 10, 11, 7, 8, 9].map((x) => x + counter));
                     break;
                 case '8':
-                    array.push([0,5,10,1,2,7,12,13,14,9,4,3,11].map((x)=> x + counter));
+                    array.push([0, 5, 10, 1, 2, 7, 12, 13, 14, 9, 4, 3, 11].map((x) => x + counter));
                     break;
                 case '9':
-                    array.push([0,5,10,1,2,7,12,13,14,9,4,11].map((x)=> x + counter));
+                    array.push([0, 5, 10, 1, 2, 7, 12, 13, 14, 9, 4, 11].map((x) => x + counter));
                     break;
                 case '0':
-                    array.push([0,5,10,1,2,12,13,14,9,4,3,11].map((x)=> x + counter));
+                    array.push([0, 5, 10, 1, 2, 12, 13, 14, 9, 4, 3, 11].map((x) => x + counter));
                     break
             }
-            counter+=20;
+            counter += 20;
         }
-        const result = [].concat(array[0],array[1],array[2],array[3]);
+        const result = [].concat(array[0], array[1], array[2], array[3]);
         return result;
     }
 
     input.addEventListener('change', (event) => {
         let target = event.target;
         let p = captcha.querySelector('p');
-        if(target.value == answer){
+        if (target.value == answer) {
             p.textContent = 'Вірно';
             p.style.color = 'green';
         }
-        else{
+        else {
             p.textContent = 'Помилка';
             p.style.color = 'red';
         }

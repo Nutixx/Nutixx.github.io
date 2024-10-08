@@ -172,7 +172,6 @@ function initPhotoRotator(divId, images) {
     imageWrapper.appendChild(imageDescription);
     rotatorDiv.appendChild(controlsDiv);
 
-    // Update image function
     function updateImage(index) {
         const currentImage = images[index];
         image.src = currentImage.path;
@@ -187,7 +186,6 @@ function initPhotoRotator(divId, images) {
     controlsDiv.addEventListener('click', function (event) {
         const target = event.target;
         if (target.tagName.toLowerCase() == 'button') {
-            console.log('hui')
             if (target == prevButton) {
                 if (currentIndex > 0) {
                     currentIndex--;

@@ -27,10 +27,20 @@ function dateConverterLogic() {
     dateInput.addEventListener('change', () => dateConvertor(dateInput));
 }
 
-dateConverterLogic()
+dateConverterLogic();
 
 function emailMatch(){
     const emailInput = document.querySelector('#emailInput');
-    const emailDiv = document.querySelector('')
+    const emailDiv = document.querySelector('.email');
+    const p = emailDiv.querySelector('p');
 
+    emailInput.value = "Contact us at support@company.com or sales@shop.org. Invalid:admin@company, test@invalid-domain"
+
+    function emailsToArray(input){
+        let emailString = input.value;
+        const regex = /[^\s@]+@[^\s@]{6,}\.[^\s@]{2,}\b/g
+        console.log(emailString.match(regex));
+    }
+    emailsToArray(emailInput)
 }
+emailMatch();

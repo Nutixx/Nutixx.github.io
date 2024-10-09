@@ -9,7 +9,6 @@ function dateConverterLogic() {
         let dateString = dateInput.value;
         const regexRes = dateString.match(/\d{2}\/\d{2}\/\d{4}/g)
         if (regexRes) {
-            // const operationArray = [];
             const resultArray = []
             for (let i = 0; i < regexRes.length; i++) {
                 let tempArr = regexRes[i].split('/');
@@ -34,13 +33,16 @@ function emailMatch(){
     const emailDiv = document.querySelector('.email');
     const p = emailDiv.querySelector('p');
 
-    emailInput.value = "Contact us at support@company.com or sales@shop.org. Invalid:admin@company, test@invalid-domain"
+    emailInput.value = "Contact us at support@company.com, sales@shop.org or mail@mail.gmail.com. Invalid:admin@company, test@invalid-domain"
 
     function emailsToArray(input){
         let emailString = input.value;
-        const regex = /[^\s@]+@[^\s@]{6,}\.[^\s@]{2,}\b/g
-        console.log(emailString.match(regex));
+        const regex = /[^\s@]+@[^\s@]+\.([^\s@]{2,6}\.)?[^\s@,]{2,}/g
+        const result = emailString.match(regex);
+        p.textContent = result;
     }
-    emailsToArray(emailInput)
+    emailsToArray(emailInput);
+    emailInput.addEventListener('change', () => emailsToArray(emailInput));
 }
+
 emailMatch();

@@ -14,13 +14,14 @@ function getLastDayOfMonth(year, month) {
     return date.getDate();
 }
 
-document.write(`<br>Останній день місяця: ${getLastDayOfMonth(2020,1)}`); // Лютий 2020, має бути 29
+document.write(`<br>Останній день місяця: ${getLastDayOfMonth(2020,1)}`);
+// Лютий 2020, має бути 29
 
 function getSecondsToTomorrow() {
     const now = new Date();
     const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
     const diff = tomorrow - now;
-    return Math.floor(diff / 1000); // Повертає кількість секунд
+    return Math.floor(diff / 1000);
 }
 
 document.write(`<br>Секунд до завтра: ${getSecondsToTomorrow()}`);
